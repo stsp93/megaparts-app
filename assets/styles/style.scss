@@ -1,0 +1,198 @@
+$white: #fff;
+$blue-dark: #16242e;
+$blue: #1c2d3a;
+$blue-light: #008aee;
+$green: #33bb5a;
+$teal: #63C7C9;
+$orange-dark: #dc5426;
+$orange-light: #e59d48;
+$purple: #BD5FE9;
+$light-text: #231f20;
+
+// breakpoints
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+.container-fluid {
+  --bs-gutter-x: unset;
+}
+
+// HEADER
+
+header {
+  background-color: $blue-dark;
+  .sticky-top {
+    background-color: $blue;
+
+    .nav-link {
+      font-weight: 300;
+    }
+  }
+
+  .navbar-nav {
+    border-left: 2px solid $blue;
+  }
+
+  .d-flex .navbar-nav:first-child {
+    border-left: none;
+  }
+
+  // links
+
+  .nav-link {
+    display: flex;
+    align-content: center;
+    color: $white;
+    font-weight: 700;
+  }
+
+  .nav-link:focus,
+  .nav-link:hover {
+    color: $white;
+    filter: brightness(0.6);
+  }
+
+  // external links
+
+  .external-links {
+    font-style: italic;
+    font-size: 20px;
+  }
+  .nav-link:first-child {
+    strong {
+      color: $orange-dark;
+    }
+  }
+  .nav-link:nth-child(2) {
+    strong {
+      color: $orange-light;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+    .hamburger {
+      color: $white;
+      background: url("../img/hamburger.svg");
+    }
+  }
+
+  // icons
+  .icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+  }
+  .icon.msg {
+    background: url("../img/msg.svg");
+  }
+  .icon.basket {
+    background: url("../img/basket.svg");
+  }
+  .icon.favorites {
+    background: url("../img/heart.svg");
+  }
+  .icon.profile {
+    background: url("../img/profile.svg");
+  }
+  .icon.yt {
+    background: url("../img/yt.svg");
+  }
+  .icon.fb {
+    background: url("../img/fb.svg");
+  }
+  .icon.phone {
+    background: url("../img/phone.svg");
+  }
+}
+
+.scrollable-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 5px;
+
+  .rounded-pill {
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  //   icons
+
+  .home {
+    background-color: $blue-light;
+    .icon {
+      background: url("../img/sec\ header/home.svg");
+    }
+  }
+  .gear-sm {
+    background-color: $blue-light;
+    .icon {
+      background: url("../img/sec\ header/gear-sm.svg");
+    }
+  }
+  .borsachasti {
+    background-color: $green;
+    .icon {
+      background: url("../img/sec\ header/borsachasti.svg");
+    }
+  }
+  .avtoborsa {
+    background-color: $teal;
+    .icon {
+      background: url("../img/sec\ header/avtoborsa.svg");
+    }
+  }
+  .prodavakoli {
+    background-color: $orange-dark;
+    .icon {
+      background: url("../img/sec\ header/prodavakoli.svg");
+    }
+  }
+  .prodavachasti {
+    background-color: $orange-light;
+    .icon {
+      background: url("../img/sec\ header/prodavachasti.svg");
+    }
+  }
+  .igri {
+    background-color: $purple;
+    .icon {
+      background: url("../img/sec\ header/igri.svg");
+    }
+  }
+  .zastrahovki {
+    background-color:unset;
+    border: 1px solid $orange-dark;
+    .icon {
+      background: url("../img/sec\ header/zastrahovki.svg");
+    }
+  }
+}
+
+// Med queries
+
+@media (max-width: $xl) {
+  .nav-cta {
+    .navbar-nav {
+      display: none;
+    }
+    .navbar-nav:first-child {
+      display: flex;
+      flex-direction: row;
+      gap: 10px;
+    }
+  }
+}

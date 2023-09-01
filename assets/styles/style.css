@@ -1,0 +1,151 @@
+.container-fluid {
+  --bs-gutter-x: unset;
+}
+
+header {
+  background-color: #16242e;
+}
+header .sticky-top {
+  background-color: #1c2d3a;
+}
+header .sticky-top .nav-link {
+  font-weight: 300;
+}
+header .navbar-nav {
+  border-left: 2px solid #1c2d3a;
+}
+header .d-flex .navbar-nav:first-child {
+  border-left: none;
+}
+header .nav-link {
+  display: flex;
+  align-content: center;
+  color: #fff;
+  font-weight: 700;
+}
+header .nav-link:focus,
+header .nav-link:hover {
+  color: #fff;
+  filter: brightness(0.6);
+}
+header .external-links {
+  font-style: italic;
+  font-size: 20px;
+}
+header .nav-link:first-child strong {
+  color: #dc5426;
+}
+header .nav-link:nth-child(2) strong {
+  color: #e59d48;
+}
+header .navbar-toggler {
+  border: none;
+}
+header .navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+header .navbar-toggler .hamburger {
+  color: #fff;
+  background: url("../img/hamburger.svg");
+}
+header .icon {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+header .icon.msg {
+  background: url("../img/msg.svg");
+}
+header .icon.basket {
+  background: url("../img/basket.svg");
+}
+header .icon.favorites {
+  background: url("../img/heart.svg");
+}
+header .icon.profile {
+  background: url("../img/profile.svg");
+}
+header .icon.yt {
+  background: url("../img/yt.svg");
+}
+header .icon.fb {
+  background: url("../img/fb.svg");
+}
+header .icon.phone {
+  background: url("../img/phone.svg");
+}
+
+.scrollable-container {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 5px;
+}
+.scrollable-container .rounded-pill {
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+.scrollable-container .home {
+  background-color: #008aee;
+}
+.scrollable-container .home .icon {
+  background: url("../img/sec header/home.svg");
+}
+.scrollable-container .gear-sm {
+  background-color: #008aee;
+}
+.scrollable-container .gear-sm .icon {
+  background: url("../img/sec header/gear-sm.svg");
+}
+.scrollable-container .borsachasti {
+  background-color: #33bb5a;
+}
+.scrollable-container .borsachasti .icon {
+  background: url("../img/sec header/borsachasti.svg");
+}
+.scrollable-container .avtoborsa {
+  background-color: #63C7C9;
+}
+.scrollable-container .avtoborsa .icon {
+  background: url("../img/sec header/avtoborsa.svg");
+}
+.scrollable-container .prodavakoli {
+  background-color: #dc5426;
+}
+.scrollable-container .prodavakoli .icon {
+  background: url("../img/sec header/prodavakoli.svg");
+}
+.scrollable-container .prodavachasti {
+  background-color: #e59d48;
+}
+.scrollable-container .prodavachasti .icon {
+  background: url("../img/sec header/prodavachasti.svg");
+}
+.scrollable-container .igri {
+  background-color: #BD5FE9;
+}
+.scrollable-container .igri .icon {
+  background: url("../img/sec header/igri.svg");
+}
+.scrollable-container .zastrahovki {
+  background-color: unset;
+  border: 1px solid #dc5426;
+}
+.scrollable-container .zastrahovki .icon {
+  background: url("../img/sec header/zastrahovki.svg");
+}
+
+@media (max-width: 1200px) {
+  .nav-cta .navbar-nav {
+    display: none;
+  }
+  .nav-cta .navbar-nav:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+}/*# sourceMappingURL=style.css.map */
