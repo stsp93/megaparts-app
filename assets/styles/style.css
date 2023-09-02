@@ -211,6 +211,18 @@ header .icon.phone {
   color: #fff;
 }
 
+.banners .carousel-indicators button {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+}
+.banners img {
+  height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 @media (max-width: 1200px) {
   .nav-cta .navbar-nav {
     display: none;
