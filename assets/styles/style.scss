@@ -1,6 +1,7 @@
+// colors
 $white: #fff;
 $black: #000;
-$blue-dark: #16242e;
+$blue-dark: #19242e;
 $blue: #1c2d3a;
 $blue-light: #008aee;
 $green: #33bb5a;
@@ -9,6 +10,7 @@ $orange-dark: #dc5426;
 $orange-light: #e59d48;
 $purple: #bd5fe9;
 $light-text: #231f20;
+$gray: #777777;
 
 // breakpoints
 $xs: 0;
@@ -219,7 +221,7 @@ header {
     }
 
     input.col {
-        margin-right: 10px;
+      margin-right: 10px;
     }
 
     .btn.col-3 {
@@ -266,18 +268,42 @@ header {
 // banners
 
 .banners {
-    .carousel-indicators button {
-        width: 10px;
-        height: 10px;
-        border-radius: 100%;
-      }
-      img {
-        height: 300px;
-        width: 100%;
-        object-fit: cover;
-      }
+  margin-bottom: 25px;
+  .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+  }
+  img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
+// Highlights
+
+.highlights {
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .highlight {
+    display: flex;
+    gap: 10px;
+    .body {
+      h4 {
+        font-size: 13px;
+        color: $blue-dark;
+        font-weight: 700;
+      }
+      p {
+        font-size: 13px;
+        color: $gray;
+      }
+    }
+  }
+}
 
 // Media queries
 
@@ -293,17 +319,32 @@ header {
       gap: 10px;
     }
   }
-
-  
 }
 
 @media (max-width: $lg) {
-    .search {
-        .filter {
-          display: flex !important ;
+  .search {
+    .filter {
+      display: flex !important ;
+    }
+  }
+  .search-checkboxes {
+    display: none;
+  }
+}
+
+@media (max-width: $md) {
+  .highlights {
+    .container {
+      flex-direction: column;
+    }
+    .highlight {
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        flex-direction: row-reverse;
+        h4 {
+          text-align: end;
         }
       }
-      .search-checkboxes {
-        display: none ;
-      }
+    }
+  }
 }

@@ -3,7 +3,7 @@
 }
 
 header {
-  background-color: #16242e;
+  background-color: #19242e;
 }
 header .sticky-top {
   background-color: #1c2d3a;
@@ -211,6 +211,9 @@ header .icon.phone {
   color: #fff;
 }
 
+.banners {
+  margin-bottom: 25px;
+}
 .banners .carousel-indicators button {
   width: 10px;
   height: 10px;
@@ -221,6 +224,24 @@ header .icon.phone {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.highlights .container {
+  display: flex;
+  justify-content: space-between;
+}
+.highlights .highlight {
+  display: flex;
+  gap: 10px;
+}
+.highlights .highlight .body h4 {
+  font-size: 13px;
+  color: #19242e;
+  font-weight: 700;
+}
+.highlights .highlight .body p {
+  font-size: 13px;
+  color: #777777;
 }
 
 @media (max-width: 1200px) {
@@ -240,5 +261,16 @@ header .icon.phone {
   }
   .search-checkboxes {
     display: none;
+  }
+}
+@media (max-width: 768px) {
+  .highlights .container {
+    flex-direction: column;
+  }
+  .highlights .highlight:nth-of-type(2), .highlights .highlight:nth-of-type(4) {
+    flex-direction: row-reverse;
+  }
+  .highlights .highlight:nth-of-type(2) h4, .highlights .highlight:nth-of-type(4) h4 {
+    text-align: end;
   }
 }/*# sourceMappingURL=style.css.map */
