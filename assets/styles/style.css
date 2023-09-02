@@ -79,7 +79,8 @@ header .icon.phone {
 }
 
 .scrollable-container {
-  overflow-x: auto;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
   white-space: nowrap;
   display: flex;
   gap: 5px;
@@ -90,6 +91,7 @@ header .icon.phone {
   padding: 0 10px;
 }
 .scrollable-container .home {
+  position: relative;
   background-color: #008aee;
 }
 .scrollable-container .home .icon {
@@ -108,7 +110,7 @@ header .icon.phone {
   background: url("../img/sec header/borsachasti.svg");
 }
 .scrollable-container .avtoborsa {
-  background-color: #63C7C9;
+  background-color: #63c7c9;
 }
 .scrollable-container .avtoborsa .icon {
   background: url("../img/sec header/avtoborsa.svg");
@@ -126,7 +128,7 @@ header .icon.phone {
   background: url("../img/sec header/prodavachasti.svg");
 }
 .scrollable-container .igri {
-  background-color: #BD5FE9;
+  background-color: #bd5fe9;
 }
 .scrollable-container .igri .icon {
   background: url("../img/sec header/igri.svg");
@@ -139,13 +141,92 @@ header .icon.phone {
   background: url("../img/sec header/zastrahovki.svg");
 }
 
+.search {
+  background-color: #008aee;
+  padding: 20px 10%;
+}
+.search form {
+  max-width: 1440px;
+  padding: 30px;
+  margin: auto;
+  background-color: #fff;
+}
+.search form .search-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.search form .filter {
+  display: none;
+  align-items: center;
+  max-width: 40px;
+}
+.search form .filter .icon {
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  background: url("../img/filter.svg") no-repeat right;
+}
+.search form input,
+.search form .btn {
+  border-radius: 20px;
+  border: 1px solid #008aee;
+}
+.search form input.col {
+  margin-right: 10px;
+}
+.search form .btn.col-3 {
+  color: #fff;
+  background-color: #008aee;
+  font-weight: 600;
+  font-size: 26px;
+  width: 165px;
+}
+.search .search-checkboxes label {
+  font-size: 18px;
+  padding: 6px 22px;
+  color: #000;
+  background-color: unset;
+  border: 1px solid;
+}
+.search .search-checkboxes label:nth-of-type(1), .search .search-checkboxes label:nth-of-type(2) {
+  border-color: #008aee;
+}
+.search .search-checkboxes label:nth-of-type(3) {
+  border-color: #33bb5a;
+}
+.search .search-checkboxes label:nth-of-type(4) {
+  border-color: #63c7c9;
+}
+.search .search-checkboxes label:nth-of-type(5) {
+  border-color: #dc5426;
+}
+.search .search-checkboxes label:nth-of-type(6) {
+  border-color: #e59d48;
+}
+.search .search-checkboxes .btn-check:checked + .btn {
+  background-color: #008aee;
+  border-color: #008aee;
+  color: #fff;
+}
+
 @media (max-width: 1200px) {
   .nav-cta .navbar-nav {
     display: none;
   }
-  .nav-cta .navbar-nav:first-child {
+  .nav-cta .navbar-nav:first-child,
+  .nav-cta .navbar-nav:nth-child(2) {
     display: flex;
     flex-direction: row;
     gap: 10px;
+  }
+}
+@media (max-width: 992px) {
+  .search .filter {
+    display: flex !important;
+  }
+  .search-checkboxes {
+    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
