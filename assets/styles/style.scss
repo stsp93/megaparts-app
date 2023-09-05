@@ -460,7 +460,9 @@ header {
   flex-direction: column;
   align-items: center;
   padding: 15px;
-  gap:10px;
+  gap: 10px;
+  max-width: 80%;
+  border: 3px solid;
   div {
     display: flex;
     justify-content: center;
@@ -472,39 +474,199 @@ header {
       margin-bottom: 0;
     }
   }
-  
+
   p {
     margin-bottom: 0;
   }
 
-  &:nth-of-type(1){
-    border: 2px solid $orange-dark;
-  h5 {
-    color: $orange-dark;
-    font-weight: 700;
+  &:nth-of-type(1) {
+    border-color: $orange-dark;
+    h5 {
+      color: $orange-dark;
+      font-weight: 700;
+    }
   }
+  &:nth-of-type(2) {
+    border-color: $green;
+    h5 {
+      color: $green;
+      font-weight: 700;
+    }
   }
-  &:nth-of-type(2){
-    border: 2px solid $green;
-  h5 {
-    color: $green;
-    font-weight: 700;
+  &:nth-of-type(3) {
+    border-color: $teal;
+    h5 {
+      color: $teal;
+      font-weight: 700;
+    }
   }
+  &:nth-of-type(4) {
+    border-color: $blue-light;
+    h5 {
+      color: $blue-light;
+      font-weight: 700;
+    }
   }
-  &:nth-of-type(3){
-    border: 2px solid $teal;
-  h5 {
-    color: $teal;
-    font-weight: 700;
+}
+
+// REVIEWS
+
+.reviews {
+  margin-bottom: 100px;
+
+  .reviews-carousel {
+    height: 260px;
+    .flickity-slider {
+      display: flex;
+      align-items: center;
+    }
   }
+  .carousel-cell {
+    max-width: 90%;
+    width: 600px;
+    margin: 0 -20px;
   }
-  &:nth-of-type(4){
-    border: 2px solid $blue-light;
-  h5 {
-    color: $blue-light;
-    font-weight: 700;
+  .is-selected {
+    background-color: $white;
+    z-index: 10;
+    height: 260px;
   }
+}
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+  height: 100%;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
+  .user {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    img {
+      border-radius: 50%;
+      width: 38px;
+      height: 38px;
+      background-color: $blue-light; //TODO:  remove
+    }
+
+    h6 {
+      color: $blue-light;
+      font-weight: 700;
+    }
+
+    .stars {
+      span {
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        background: url("../img/star.svg");
+      }
+    }
+  }
+}
+
+// MAP
+
+.map {
+  position: relative;
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+  }
+
+  .pin {
+    position: absolute;
+    background: url('../img/pin.svg');
+    width: 100px;
+    height: 100px;
+
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 40px;
+      height: 40px;
+      background: url('../img/pin-icon.svg') no-repeat;
+      left: 50%;
+      top: 50%;
+      transform: translate(-45%, -45%);
+    }
+&::before {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      width: 40px;
+      height: 40px;
+      background: url('../img/wrench.svg') no-repeat;
+      left: 50%;
+      top: 50%;
+      transform: translate(-40%, -20%);
+    }
+
+    &:nth-of-type(1) {
+      left: 13%;
+      top: 28%;
+
+      .info {
+        
+
+        transform: translate(-5%, -50%);
+      }
+    }
+
+    &:nth-of-type(2) {
+      right: 8%;
+      top: 13%;
+
+      .info {
+        transform: translate(-95%, -50%);
+      }
+    }
+     
+    .info {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      width: 250px;
+      height: 50px;
+      border-radius: 50px;
+      background: linear-gradient(270deg, #008AEE 0%, #006DBB 100%);
+      z-index: -1;
+
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      color: $white;
+      
+      transition: opacity 0.3s;
+
+      p {
+        margin-bottom: 0;
+        &:last-of-type {
+          font-weight: 400;
+        }
+      }
+    }
+    &:hover .info {
+      opacity: 1;
+     }
+  }
+
+
 }
 
 // Media queries
@@ -552,5 +714,7 @@ header {
 
   .slider {
     flex-direction: column !important;
+
+    
   }
 }

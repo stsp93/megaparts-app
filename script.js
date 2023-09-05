@@ -16,9 +16,9 @@ $('.main-carousel').flickity({
     pageDots: false,
     setGallerySize: false,
     contain: true
-  });
- 
-  $('.auto-carousel').flickity({
+});
+
+$('.auto-carousel').flickity({
     cellAlign: 'left',
     groupCells: true,
     pageDots: false,
@@ -26,8 +26,14 @@ $('.main-carousel').flickity({
     autoPlay: true,
     setGallerySize: false,
     contain: true
-  });
+});
 
+$('.reviews-carousel').flickity({
+    initialIndex: 3,
+    wrapAround: true,
+    pageDots: false,
+    setGallerySize: false,
+});
 
 
 

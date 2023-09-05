@@ -377,6 +377,8 @@ header .icon.phone {
   align-items: center;
   padding: 15px;
   gap: 10px;
+  max-width: 80%;
+  border: 3px solid;
 }
 .service-small div {
   display: flex;
@@ -392,32 +394,168 @@ header .icon.phone {
   margin-bottom: 0;
 }
 .service-small:nth-of-type(1) {
-  border: 2px solid #dc5426;
+  border-color: #dc5426;
 }
 .service-small:nth-of-type(1) h5 {
   color: #dc5426;
   font-weight: 700;
 }
 .service-small:nth-of-type(2) {
-  border: 2px solid #33bb5a;
+  border-color: #33bb5a;
 }
 .service-small:nth-of-type(2) h5 {
   color: #33bb5a;
   font-weight: 700;
 }
 .service-small:nth-of-type(3) {
-  border: 2px solid #63c7c9;
+  border-color: #63c7c9;
 }
 .service-small:nth-of-type(3) h5 {
   color: #63c7c9;
   font-weight: 700;
 }
 .service-small:nth-of-type(4) {
-  border: 2px solid #008aee;
+  border-color: #008aee;
 }
 .service-small:nth-of-type(4) h5 {
   color: #008aee;
   font-weight: 700;
+}
+
+.reviews {
+  margin-bottom: 100px;
+}
+.reviews .reviews-carousel {
+  height: 260px;
+}
+.reviews .reviews-carousel .flickity-slider {
+  display: flex;
+  align-items: center;
+}
+.reviews .carousel-cell {
+  max-width: 90%;
+  width: 600px;
+  margin: 0 -20px;
+}
+.reviews .is-selected {
+  background-color: #fff;
+  z-index: 10;
+  height: 260px;
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 25px;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.review .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review .user {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.review .user img {
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  background-color: #008aee;
+}
+.review .user h6 {
+  color: #008aee;
+  font-weight: 700;
+}
+.review .user .stars span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url("../img/star.svg");
+}
+
+.map {
+  position: relative;
+}
+.map img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+}
+.map .pin {
+  position: absolute;
+  background: url("../img/pin.svg");
+  width: 100px;
+  height: 100px;
+}
+.map .pin::after {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("../img/pin-icon.svg") no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-45%, -45%);
+}
+.map .pin::before {
+  position: absolute;
+  display: inline-block;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("../img/wrench.svg") no-repeat;
+  left: 50%;
+  top: 50%;
+  transform: translate(-40%, -20%);
+}
+.map .pin:nth-of-type(1) {
+  left: 13%;
+  top: 28%;
+}
+.map .pin:nth-of-type(1) .info {
+  transform: translate(-5%, -50%);
+}
+.map .pin:nth-of-type(2) {
+  right: 8%;
+  top: 13%;
+}
+.map .pin:nth-of-type(2) .info {
+  transform: translate(-95%, -50%);
+}
+.map .pin .info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  width: 250px;
+  height: 50px;
+  border-radius: 50px;
+  background: linear-gradient(270deg, #008AEE 0%, #006DBB 100%);
+  z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #fff;
+  transition: opacity 0.3s;
+}
+.map .pin .info p {
+  margin-bottom: 0;
+}
+.map .pin .info p:last-of-type {
+  font-weight: 400;
+}
+.map .pin:hover .info {
+  opacity: 1;
 }
 
 @media (max-width: 1200px) {
