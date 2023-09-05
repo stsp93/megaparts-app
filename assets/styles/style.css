@@ -538,7 +538,7 @@ header .icon.phone {
   width: 250px;
   height: 50px;
   border-radius: 50px;
-  background: linear-gradient(270deg, #008AEE 0%, #006DBB 100%);
+  background: linear-gradient(270deg, #008aee 0%, #006dbb 100%);
   z-index: -1;
   display: flex;
   flex-direction: column;
@@ -556,6 +556,69 @@ header .icon.phone {
 }
 .map .pin:hover .info {
   opacity: 1;
+}
+
+footer {
+  background: #202d39;
+  padding: 35px;
+}
+footer .col-md {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #19242d;
+}
+footer .col-md h6 {
+  font-weight: 700;
+}
+footer .col-md a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer .col-md:first-of-type {
+  gap: 16px;
+  padding: 0;
+  background: #202d39;
+}
+footer .col-md:first-of-type div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #19242d;
+}
+footer .col-md:first-of-type div:first-of-type {
+  height: 100%;
+}
+footer .col-md:first-of-type .green-link {
+  color: #33bb5a;
+  font-weight: 700;
+}
+footer .col-md:last-of-type {
+  padding: 25px;
+  text-align: center;
+}
+footer .col-md:last-of-type .logo {
+  margin-bottom: 50px;
+}
+footer .col-md:last-of-type .logo p {
+  font-size: 14px;
+}
+footer .col-md:last-of-type h2 {
+  font-style: italic;
+  font-size: 25px;
+}
+footer .col-md:last-of-type h2 strong {
+  color: #dc5426;
+}
+footer .col-md:last-of-type h2:last-of-type strong {
+  color: #e59d48;
 }
 
 @media (max-width: 1200px) {
@@ -589,5 +652,11 @@ header .icon.phone {
   }
   .slider {
     flex-direction: column !important;
+  }
+}
+@media (max-width: 576px) {
+  footer .col-md {
+    max-width: 90%;
+    margin: auto;
   }
 }/*# sourceMappingURL=style.css.map */
