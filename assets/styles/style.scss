@@ -315,26 +315,23 @@ header {
     flex-direction: row-reverse;
     .slider-header {
       background-color: $green;
+      button {
+        color: $green;
+      }
     }
   }
 }
 
 .slider {
   display: flex;
-  // align-items: start;
+  align-items: center;
   gap: 40px;
   margin-bottom: 80px;
   .slider-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 25px;
-    text-align: center;
     background-color: $blue-light;
     min-width: 267px;
-    img {
-      width: 40px;
+    button {
+      color: $blue-light;
     }
   }
 
@@ -342,15 +339,13 @@ header {
     width: 100%;
 
     .flickity-enabled {
-      height: 250px;
+      height: 267px;
     }
 
     .carousel-cell {
       width: 267px;
       margin-right: 40px;
     }
-
-
 
     .card {
       text-decoration: none;
@@ -366,35 +361,151 @@ header {
 
     .flickity-button {
       height: 100%;
-      width: 30%;
+      width: 20%;
       border-radius: unset;
-      
-      
+      box-shadow: none;
+
       .flickity-button-icon {
         width: 30px;
         height: 30px;
         color: $blue-light;
-
       }
     }
     .flickity-button:nth-last-of-type(1) {
-      background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%, rgb(255, 255, 255,1) 100%);
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgb(255, 255, 255, 1) 100%
+      );
     }
     .flickity-prev-next-button.previous {
       left: 0;
     }
     .flickity-button:nth-last-of-type(2) {
-      background: linear-gradient(270deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%, rgb(255, 255, 255,1) 100%);
-      
+      background: linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.8) 50%,
+        rgb(255, 255, 255, 1) 100%
+      );
     }
     .flickity-prev-next-button.next {
-      right: 0 ;
+      right: 0;
     }
   }
 }
 
+// SERVICES
 
+.services {
+  margin-bottom: 87px;
+}
 
+.service-group {
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.service-big {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  padding: 25px;
+  text-align: center;
+
+  max-width: 80%;
+
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+  }
+  img {
+    width: 40px;
+  }
+  button {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &:nth-of-type(1) {
+    background-color: $teal;
+    button {
+      color: $teal;
+    }
+  }
+  &:nth-of-type(2) {
+    background-color: $orange-dark;
+    button {
+      color: $orange-dark;
+    }
+  }
+  &:nth-of-type(3) {
+    background-color: $orange-light;
+    button {
+      color: $orange-light;
+    }
+  }
+  &:nth-of-type(4) {
+    background-color: $purple;
+    button {
+      color: $purple;
+    }
+  }
+}
+
+.service-small {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  gap:10px;
+  div {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+
+    h5 {
+      font-size: 20px;
+      margin-bottom: 0;
+    }
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
+
+  &:nth-of-type(1){
+    border: 2px solid $orange-dark;
+  h5 {
+    color: $orange-dark;
+    font-weight: 700;
+  }
+  }
+  &:nth-of-type(2){
+    border: 2px solid $green;
+  h5 {
+    color: $green;
+    font-weight: 700;
+  }
+  }
+  &:nth-of-type(3){
+    border: 2px solid $teal;
+  h5 {
+    color: $teal;
+    font-weight: 700;
+  }
+  }
+  &:nth-of-type(4){
+    border: 2px solid $blue-light;
+  h5 {
+    color: $blue-light;
+    font-weight: 700;
+  }
+  }
+}
 
 // Media queries
 
@@ -440,6 +551,6 @@ header {
   }
 
   .slider {
-    flex-direction: column;
+    flex-direction: column !important;
   }
 }

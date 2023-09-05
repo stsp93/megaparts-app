@@ -22,6 +22,7 @@ $('.main-carousel').flickity({
     cellAlign: 'left',
     groupCells: true,
     pageDots: false,
+    prevNextButtons: false,
     autoPlay: true,
     setGallerySize: false,
     contain: true
