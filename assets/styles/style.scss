@@ -284,6 +284,7 @@ header {
 // Highlights
 
 .highlights {
+  margin-bottom: 42px;
   .container {
     display: flex;
     justify-content: space-between;
@@ -304,6 +305,96 @@ header {
     }
   }
 }
+
+// Sliders
+
+.sliders {
+  overflow: hidden;
+
+  .slider:nth-of-type(2) {
+    flex-direction: row-reverse;
+    .slider-header {
+      background-color: $green;
+    }
+  }
+}
+
+.slider {
+  display: flex;
+  // align-items: start;
+  gap: 40px;
+  margin-bottom: 80px;
+  .slider-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    text-align: center;
+    background-color: $blue-light;
+    min-width: 267px;
+    img {
+      width: 40px;
+    }
+  }
+
+  .slider-body {
+    width: 100%;
+
+    .flickity-enabled {
+      height: 250px;
+    }
+
+    .carousel-cell {
+      width: 267px;
+      margin-right: 40px;
+    }
+
+
+
+    .card {
+      text-decoration: none;
+
+      .price {
+        color: $green;
+        font-weight: 700;
+      }
+      .number {
+        font-size: 14px;
+      }
+    }
+
+    .flickity-button {
+      height: 100%;
+      width: 30%;
+      border-radius: unset;
+      
+      
+      .flickity-button-icon {
+        width: 30px;
+        height: 30px;
+        color: $blue-light;
+
+      }
+    }
+    .flickity-button:nth-last-of-type(1) {
+      background: linear-gradient(90deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%, rgb(255, 255, 255,1) 100%);
+    }
+    .flickity-prev-next-button.previous {
+      left: 0;
+    }
+    .flickity-button:nth-last-of-type(2) {
+      background: linear-gradient(270deg, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 50%, rgb(255, 255, 255,1) 100%);
+      
+    }
+    .flickity-prev-next-button.next {
+      right: 0 ;
+    }
+  }
+}
+
+
+
 
 // Media queries
 
@@ -346,5 +437,9 @@ header {
         }
       }
     }
+  }
+
+  .slider {
+    flex-direction: column;
   }
 }

@@ -226,6 +226,9 @@ header .icon.phone {
      object-fit: cover;
 }
 
+.highlights {
+  margin-bottom: 42px;
+}
 .highlights .container {
   display: flex;
   justify-content: space-between;
@@ -242,6 +245,77 @@ header .icon.phone {
 .highlights .highlight .body p {
   font-size: 13px;
   color: #777777;
+}
+
+.sliders {
+  overflow: hidden;
+}
+.sliders .slider:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+.sliders .slider:nth-of-type(2) .slider-header {
+  background-color: #33bb5a;
+}
+
+.slider {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 80px;
+}
+.slider .slider-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 25px;
+  text-align: center;
+  background-color: #008aee;
+  min-width: 267px;
+}
+.slider .slider-header img {
+  width: 40px;
+}
+.slider .slider-body {
+  width: 100%;
+}
+.slider .slider-body .flickity-enabled {
+  height: 250px;
+}
+.slider .slider-body .carousel-cell {
+  width: 267px;
+  margin-right: 40px;
+}
+.slider .slider-body .card {
+  text-decoration: none;
+}
+.slider .slider-body .card .price {
+  color: #33bb5a;
+  font-weight: 700;
+}
+.slider .slider-body .card .number {
+  font-size: 14px;
+}
+.slider .slider-body .flickity-button {
+  height: 100%;
+  width: 30%;
+  border-radius: unset;
+}
+.slider .slider-body .flickity-button .flickity-button-icon {
+  width: 30px;
+  height: 30px;
+  color: #008aee;
+}
+.slider .slider-body .flickity-button:nth-last-of-type(1) {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgb(255, 255, 255) 100%);
+}
+.slider .slider-body .flickity-prev-next-button.previous {
+  left: 0;
+}
+.slider .slider-body .flickity-button:nth-last-of-type(2) {
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 50%, rgb(255, 255, 255) 100%);
+}
+.slider .slider-body .flickity-prev-next-button.next {
+  right: 0;
 }
 
 @media (max-width: 1200px) {
@@ -272,5 +346,8 @@ header .icon.phone {
   }
   .highlights .highlight:nth-of-type(2) h4, .highlights .highlight:nth-of-type(4) h4 {
     text-align: end;
+  }
+  .slider {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=style.css.map */
