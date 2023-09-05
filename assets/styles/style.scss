@@ -28,9 +28,8 @@ $xxl: 1400px;
 
 header {
   background-color: $blue-dark;
-  .sticky-top {
+  .sec-header {
     background-color: $blue;
-
     .nav-link {
       font-weight: 300;
     }
@@ -411,6 +410,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 36px;
   padding: 25px;
   text-align: center;
@@ -530,6 +530,17 @@ header {
     background-color: $white;
     z-index: 10;
     height: 260px;
+  }
+
+  .flickity-button {
+    width: 30px;
+    height: 30px;
+    color: $blue-light;
+    &:hover,
+    &:focus {
+      background-color: unset;
+      box-shadow: none;
+    }
   }
 }
 .review {
@@ -664,6 +675,81 @@ header {
   }
 }
 
+// LOGIN/REGISTER
+
+.form.container {
+  margin: 50px auto;
+  max-width: 600px;
+  font-size: 18px;
+  h2 {
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+  .btn {
+    background-color: $green;
+
+  }
+
+  .registerBtn {
+    background-color: $blue-light;
+  }
+}
+
+// DETAILS
+
+.details {
+  margin: 50px auto;
+
+  .details-title {
+    font-weight: 700;
+  }
+
+  .additional-info {
+    font-style: italic;
+  }
+
+  .price {
+    font-size: 20px;
+    color: $green;
+    font-weight: 700;
+  }
+
+  .backBtn {
+    background-color: $blue-light;
+
+  }
+}
+
+// CART
+
+.cart {
+  margin: 50px auto;
+
+strong {
+  color: $green;
+}
+  .total-price {
+    font-size: 20px;
+  }
+  .checkoutBtn {
+    
+    background-color: $green;
+
+   
+  }
+}
+
+.cta {
+  padding: 10px 40px;
+    font-weight: 700;
+    font-size: 20px;
+    color: $white;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 // FOOTER
 
 footer {
@@ -671,13 +757,12 @@ footer {
   padding: 35px;
   .col-md {
     display: flex;
-      flex-direction: column;
-      gap: 10px;
+    flex-direction: column;
+    gap: 10px;
     color: $white;
     padding: 15px;
     border-radius: 10px;
     background-color: #19242d;
-
 
     h6 {
       font-weight: 700;
@@ -690,7 +775,6 @@ footer {
     }
 
     &:first-of-type {
-      
       gap: 16px;
       padding: 0;
       background: #202d39;
@@ -764,9 +848,8 @@ footer {
   }
 }
 @media (max-width: $md) {
-  
   .highlights {
-  .container {
+    .container {
       flex-direction: column;
     }
     .highlight {
@@ -785,11 +868,11 @@ footer {
   }
 }
 
-  @media (max-width: $sm) {
-    footer {
-      .col-md {
-        max-width: 90%;
-        margin: auto;
-      }
+@media (max-width: $sm) {
+  footer {
+    .col-md {
+      max-width: 90%;
+      margin: auto;
     }
   }
+}

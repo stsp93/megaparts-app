@@ -5,10 +5,10 @@
 header {
   background-color: #19242e;
 }
-header .sticky-top {
+header .sec-header {
   background-color: #1c2d3a;
 }
-header .sticky-top .nav-link {
+header .sec-header .nav-link {
   font-weight: 300;
 }
 header .navbar-nav {
@@ -330,6 +330,7 @@ header .icon.phone {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   gap: 36px;
   padding: 25px;
   text-align: center;
@@ -441,6 +442,15 @@ header .icon.phone {
   background-color: #fff;
   z-index: 10;
   height: 260px;
+}
+.reviews .flickity-button {
+  width: 30px;
+  height: 30px;
+  color: #008aee;
+}
+.reviews .flickity-button:hover, .reviews .flickity-button:focus {
+  background-color: unset;
+  box-shadow: none;
 }
 
 .review {
@@ -556,6 +566,63 @@ header .icon.phone {
 }
 .map .pin:hover .info {
   opacity: 1;
+}
+
+.form.container {
+  margin: 50px auto;
+  max-width: 600px;
+  font-size: 18px;
+}
+.form.container h2 {
+  font-size: 25px;
+  font-weight: 700;
+}
+.form.container .btn {
+  background-color: #33bb5a;
+}
+.form.container .registerBtn {
+  background-color: #008aee;
+}
+
+.details {
+  margin: 50px auto;
+}
+.details .details-title {
+  font-weight: 700;
+}
+.details .additional-info {
+  font-style: italic;
+}
+.details .price {
+  font-size: 20px;
+  color: #33bb5a;
+  font-weight: 700;
+}
+.details .backBtn {
+  background-color: #008aee;
+}
+
+.cart {
+  margin: 50px auto;
+}
+.cart strong {
+  color: #33bb5a;
+}
+.cart .total-price {
+  font-size: 20px;
+}
+.cart .checkoutBtn {
+  background-color: #33bb5a;
+}
+
+.cta {
+  padding: 10px 40px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+}
+.cta:hover {
+  opacity: 0.8;
 }
 
 footer {
