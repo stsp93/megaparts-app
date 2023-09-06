@@ -3,17 +3,14 @@
 @section('content')
     
 
-
-
-
     <section class="search container-fluid">
-      <form class="rounded-5 container">
+      <form method="get" action="/search" class="rounded-5 container">
         <div class="search-header">
           <img src="{{asset('img/magnifier.svg')}}" alt="" />
           <h4 class="fw-bold">Бързо Търсене</h4>
         </div>
         <div class="row justify-content-between my-3">
-          <input class="col rounded-5" type="text" placeholder="Търсене..." />
+          <input name="q" class="col rounded-5" type="text" placeholder="Търсене..." />
           <a href="#" class="filter col">
             <span class="icon"></span>
           </a>
@@ -23,7 +20,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option1"
             autocomplete="off"
             checked
@@ -32,7 +28,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option2"
             autocomplete="off"
           />
@@ -40,7 +35,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option3"
             autocomplete="off"
           />
@@ -48,7 +42,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option4"
             autocomplete="off"
           />
@@ -56,7 +49,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option5"
             autocomplete="off"
           />
@@ -64,7 +56,6 @@
           <input
             type="radio"
             class="btn-check"
-            name="options"
             id="option6"
             autocomplete="off"
           />
