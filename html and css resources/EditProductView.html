@@ -153,17 +153,21 @@
 
     <main>
         <div class="form container">
-            <h2>ПОТРЕБИТЕЛСКИ ВХОД</h2>
+            <h2>Промени Продукт</h2>
             <form>
               <div class="mb-3">
-                <label for="username" class="form-label">Потребител</label>
-                <input type="text" class="form-control rounded-5" id="username" placeholder="Въведете потребител">
+                <label for="name" class="form-label">Име</label>
+                <input type="text" class="form-control rounded-5" id="name" value="Въведете име">
               </div>
               <div class="mb-3">
-                <label for="password" class="form-label">Парола</label>
-                <input type="password" class="form-control rounded-5" id="password" placeholder="Въведете парола">
+                <label for="description" class="form-label">Описание</label>
+                <input type="text" class="form-control rounded-5" id="description" value="Въведете описание">
               </div>
-              <button type="submit" class="cta loginBtn btn rounded-5">ВХОД</button>
+              <div class="mb-3">
+                <label for="imageUrl" class="form-label">Линк към снимка</label>
+                <input type="text" class="form-control rounded-5" id="imageUrl" value="Въведете линка">
+              </div>
+              <button type="submit" class="btn btn-warning rounded-5">&crarr; Направи промяна</button>
             </form>
           </div>
     </main>
@@ -211,3 +215,4 @@
       </footer>
     </body>
   </html>
+  

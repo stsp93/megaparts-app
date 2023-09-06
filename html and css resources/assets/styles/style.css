@@ -577,7 +577,7 @@ header .icon.phone {
   font-size: 25px;
   font-weight: 700;
 }
-.form.container .btn {
+.form.container .loginBtn {
   background-color: #33bb5a;
 }
 .form.container .registerBtn {
@@ -598,20 +598,27 @@ header .icon.phone {
   color: #33bb5a;
   font-weight: 700;
 }
-.details .backBtn {
+
+.backBtn {
+  background-color: #008aee;
+}
+.backBtn:hover {
   background-color: #008aee;
 }
 
-.cart {
+.results {
   margin: 50px auto;
 }
-.cart strong {
+.results strong {
   color: #33bb5a;
 }
-.cart .total-price {
+.results .total-price {
   font-size: 20px;
 }
-.cart .checkoutBtn {
+.results .agreeBtn {
+  background-color: #33bb5a;
+}
+.results .agreeBtn:hover {
   background-color: #33bb5a;
 }
 

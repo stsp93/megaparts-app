@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
+    "name": "stsp93/megaparts-app",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "Megaparts app using laravel",
     "keywords": ["laravel", "framework"],
     "license": "MIT",
     "require": {

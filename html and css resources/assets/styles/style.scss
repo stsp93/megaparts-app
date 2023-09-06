@@ -677,7 +677,7 @@ header {
   }
 }
 
-// LOGIN/REGISTER
+// LOGIN
 
 .form.container {
   margin: 50px auto;
@@ -688,7 +688,7 @@ header {
     font-weight: 700;
   }
 
-  .btn {
+  .loginBtn {
     background-color: $green;
 
   }
@@ -716,16 +716,18 @@ header {
     color: $green;
     font-weight: 700;
   }
+}
 
-  .backBtn {
+.backBtn {
+  background-color: $blue-light;
+  &:hover {
     background-color: $blue-light;
-
   }
 }
 
-// CART
+// RESULTS/CART
 
-.cart {
+.results {
   margin: 50px auto;
 
 strong {
@@ -734,11 +736,11 @@ strong {
   .total-price {
     font-size: 20px;
   }
-  .checkoutBtn {
-    
+  .agreeBtn {
     background-color: $green;
-
-   
+    &:hover {
+      background-color: $green;
+    }
   }
 }
 
@@ -752,6 +754,8 @@ strong {
     opacity: 0.8;
   }
 }
+
+
 
 // FOOTER
 
