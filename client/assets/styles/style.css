@@ -622,6 +622,7 @@ header .icon.phone {
   color: #fff;
 }
 .cta:hover {
+  color: #fff;
   opacity: 0.8;
 }
 
@@ -646,6 +647,9 @@ footer .col-md a {
   color: #fff;
   text-decoration: none;
   font-size: 14px;
+}
+footer .col-md a:hover {
+  opacity: 0.8;
 }
 footer .col-md:first-of-type {
   gap: 16px;
@@ -677,14 +681,14 @@ footer .col-md:last-of-type .logo {
 footer .col-md:last-of-type .logo p {
   font-size: 14px;
 }
-footer .col-md:last-of-type h2 {
+footer .col-md:last-of-type a {
   font-style: italic;
   font-size: 25px;
 }
-footer .col-md:last-of-type h2 strong {
+footer .col-md:last-of-type a strong {
   color: #dc5426;
 }
-footer .col-md:last-of-type h2:last-of-type strong {
+footer .col-md:last-of-type a:last-of-type strong {
   color: #e59d48;
 }
 
