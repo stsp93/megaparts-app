@@ -13,10 +13,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// COMMON ROUTES
+// index
+// show
+// create
+// store
+// edit
+// update
+// destroy
 
-Route::get('/hello', function () {
-    return ddd('welcome');
+Route::get('/', function () {
+    return view('home');
 });
