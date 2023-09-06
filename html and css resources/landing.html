@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <script
+      src="https://kit.fontawesome.com/48ed1957d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"
+      integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"
+      integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.css"
+      integrity="sha512-TZTUnuHs1njGko8PJqZlHzqZTZd880A+BvhR1jy1v4mWB4VFKVLG/eK9LYdDjxqNLmttSC1ygmqg6rkYjnEgaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets//styles/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg container">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="./assets/img/Logo.png" alt="Megaparts"
+          /></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNavbar"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link external-links" href="#"
+                ><strong>MEGA</strong>CARS</a
+              >
+              <a class="nav-link external-links" href="#"
+                ><strong>MEGA</strong>ОБЯВИ</a
+              >
+            </div>
+            <div class="nav nav-cta">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"><span class="icon msg"></span></a>
+                <a class="nav-link" href="#"
+                  ><span class="icon basket"></span
+                ></a>
+                <a class="nav-link" href="#"
+                  ><span class="icon favorites"></span
+                ></a>
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"
+                  ><span class="icon profile"></span> ВХОД</a
+                >
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"><span class="icon yt"></span></a>
+                <a class="nav-link" href="#"><span class="icon fb"></span></a>
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"
+                  ><span class="icon phone"></span> 02 437 32 48</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="sec-header container-fluid">
+        <div class="container">
+          <div class="scrollable-container p-3">
+            <a class="nav-link rounded-pill home" href="#"
+              ><span class="icon"></span
+            ></a>
+            <a class="nav-link rounded-pill gear-sm" href="#"
+              ><span class="icon"></span> АВТОЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill borsachasti" href="#"
+              ><span class="icon"></span> БОРСА ЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill avtoborsa" href="#"
+              ><span class="icon"></span> АВТОБОРСА</a
+            >
+            <a class="nav-link rounded-pill prodavakoli" href="#"
+              ><span class="icon"></span> ПРОДАВА КОЛИ</a
+            >
+            <a class="nav-link rounded-pill prodavachasti" href="#"
+              ><span class="icon"></span> ПРОДАВА ЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill igri" href="#"
+              ><span class="icon"></span> ИГРИ</a
+            >
+            <a class="nav-link rounded-pill zastrahovki" href="#"
+              ><span class="icon"></span> ЗАСТРАХОВКИ</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="search container-fluid">
+        <form class="rounded-5 container">
+          <div class="search-header">
+            <img src="./assets/img/magnifier.svg" alt="" />
+            <h4 class="fw-bold">Бързо Търсене</h4>
+          </div>
+          <div class="row justify-content-between my-3">
+            <input class="col rounded-5" type="text" placeholder="Търсене..." />
+            <a href="#" class="filter col">
+              <span class="icon"></span>
+            </a>
+            <button class="btn col-3 rounded-5" type="submit">Търсене</button>
+          </div>
+          <div class="search-checkboxes">
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option1"
+              autocomplete="off"
+              checked
+            />
+            <label class="btn" for="option1">Всичко</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option2"
+              autocomplete="off"
+            />
+            <label class="btn" for="option2">Авточасти</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option3"
+              autocomplete="off"
+            />
+            <label class="btn" for="option3">Борса Части</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option4"
+              autocomplete="off"
+            />
+            <label class="btn" for="option4">Автоборса</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option5"
+              autocomplete="off"
+            />
+            <label class="btn" for="option5">Продава Коли</label>
+            <input
+              type="radio"
+              class="btn-check"
+              name="options"
+              id="option6"
+              autocomplete="off"
+            />
+            <label class="btn" for="option6">Продава Части</label>
+          </div>
+        </form>
+      </section>
+      <section class="banners">
+        <div
+          id="banners-carousel"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#banners-carousel"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#banners-carousel"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#banners-carousel"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./assets/img/banners/banner1.png"
+                class="img-fluid"
+                alt="banner"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/banners/banner2.jpg"
+                class="img-fluid"
+                alt="banner"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./assets/img/banners/banner3.jpg"
+                class="img-fluid"
+                alt="banner"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="highlights">
+        <div class="container">
+          <div class="highlight">
+            <img src="./assets/img/delivery truck.svg" alt="" />
+            <div class="body">
+              <h4>Експресна доставка</h4>
+              <p>Доставяме до всяка точка на България.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <img src="./assets/img/new parts.svg" alt="" />
+            <div class="body">
+              <h4>Нови части всеки ден</h4>
+              <p>Ежедневно зареждаме нова стока.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <img src="./assets/img/qa.svg" alt="" />
+            <div class="body">
+              <h4>Проверено качество</h4>
+              <p>Авточасти с гаранция.</p>
+            </div>
+          </div>
+          <div class="highlight">
+            <img src="./assets/img/return.svg" alt="" />
+            <div class="body">
+              <h4>Право на връщане</h4>
+              <p>14 дни право на връщане на всяка поръчка</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="sliders container">
+        <!-- 1st slider -->
+        <div class="slider">
+          <div class="slider-header service-big text-white rounded-5">
+            <div>
+              <img src="./assets/img/sec header/gear-sm.svg" alt="gear" />
+              <h3>Авточасти</h3>
+            </div>
+            <p>Най-големия онлайн магазин за авточасти в България!</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+
+          <!-- Carousel slider -->
+          <div class="slider-body">
+            <h3>Специални предложения</h3>
+            <div class="main-carousel">
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product1.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product2.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product3.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product3.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 2nd auto slider -->
+
+        <div class="slider">
+          <div class="slider-header service-big text-white rounded-5">
+            <div>
+              <img src="./assets/img/sec header/gear-sm.svg" alt="gear" />
+              <h3>Борса части</h3>
+            </div>
+            <p>Най-голямата борса за авточасти в България!</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+
+          <!-- Carousel slider -->
+          <div class="slider-body">
+            <h3>Последни оферти и запитвания</h3>
+            <div class="auto-carousel">
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product1.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product2.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product3.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="carousel-cell">
+                <a href="#" class="card">
+                  <img
+                    src="./assets/img/products/product3.png"
+                    class="card-img-top"
+                    alt="product"
+                  />
+                  <div class="card-body">
+                    <h6 class="card-title">
+                      Фар за Audi A5 Coupe I (06.2007 - 01.2017), купе, позиция:
+                      дясна
+                    </h6>
+                    <div class="d-flex justify-content-between">
+                      <p class="number">Кат. &#8470;: s_167232784</p>
+                      <p class="price">967.70 лв.</p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="services container">
+        <!-- big services -->
+        <div class="service-group row gap-4">
+          <div class="service-big text-white rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/avtoborsa.svg" alt="gear" />
+              <h3>Автоборса</h3>
+            </div>
+            <p>Залагане, търгуване и продаване на автомобили.</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+          <div class="service-big text-white rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/prodavakoli.svg" alt="gear" />
+              <h3>Продава коли</h3>
+            </div>
+            <p>Обяви за коли. Част от MEGACARS.</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+          <div class="service-big text-white rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/prodavachasti.svg" alt="gear" />
+              <h3>Продава части</h3>
+            </div>
+            <p>Обяви за части. Част от MEGAОБЯВИ.</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+          <div class="service-big text-white rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/igri.svg" alt="gear" />
+              <h3>Игри</h3>
+            </div>
+            <p>Забавления за ценители!</p>
+            <button class="btn rounded-5 bg-white">Разгледай</button>
+          </div>
+        </div>
+        <!-- small services -->
+        <div class="service-group row gap-4">
+          <div class="service-small rounded-5 col-md">
+            <div>
+              <img
+                src="./assets/img/sec header/zastrahovkiOrange.svg"
+                alt="insurance"
+              />
+              <h5>Застраховки</h5>
+            </div>
+            <p>Застраховай автомобила си.</p>
+          </div>
+          <div class="service-small rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/crediti.svg" alt="credits" />
+              <h5>Кредити</h5>
+            </div>
+            <p>MEGA в нужда се познава.</p>
+          </div>
+          <div class="service-small rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/avtodnevnik.svg" alt="diary" />
+              <h5>Автодневник</h5>
+            </div>
+            <p>Твоят автодневник.</p>
+          </div>
+          <div class="service-small rounded-5 col-md">
+            <div>
+              <img src="./assets/img/sec header/novini.svg" alt="news" />
+              <h5>Новини</h5>
+            </div>
+            <p>Всичко в света на колите.</p>
+          </div>
+        </div>
+      </section>
+      <section class="reviews container">
+        <div class="reviews-carousel">
+          <div class="carousel-cell">
+            <div class="review rounded-5">
+              <div class="header">
+                <img src="./assets/img/quotes.svg" alt="" />
+                <p>
+                  Единственото място в Интернет (българско) , където намирам
+                  части за коли 25+ години. Имат доставка за Пловдив! Реално Ти
+                  ги носят на адрес. Не мога да кажа нищо лошо.
+                </p>
+              </div>
+              <div class="user">
+                <img src="" alt="" />
+                <div class="info">
+                  <h6 class="name">Мартин</h6>
+                  <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-cell">
+            <div class="review rounded-5">
+              <div class="header">
+                <img src="./assets/img/quotes.svg" alt="" />
+                <p>
+                  Много бързо и изключително коректно и професионално отношение!
+                </p>
+              </div>
+              <div class="user">
+                <img src="" alt="" />
+                <div class="info">
+                  <h6 class="name">Мартин</h6>
+                  <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="review rounded-5">
+              <div class="header">
+                <img src="./assets/img/quotes.svg" alt="" />
+                <p>
+                  Реагират своевременно, СУК работи и повишава качеството на
+                  услугите.
+                </p>
+              </div>
+              <div class="user">
+                <img src="" alt="" />
+                <div class="info">
+                  <h6 class="name">Мартин</h6>
+                  <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="review rounded-5">
+              <div class="header">
+                <img src="./assets/img/quotes.svg" alt="" />
+                <p>
+                  Доволен съм от поръчаните до момента авточасти. Хубаво е да Ви
+                  има на пазара с авточасти, защото иначе автоморгите ще откачат
+                  с високите си цени. Вие сте нещо като регулатор на този не
+                  малък пазар на части втора употреба. Благодаря!
+                </p>
+              </div>
+              <div class="user">
+                <img src="" alt="" />
+                <div class="info">
+                  <h6 class="name">Мартин</h6>
+                  <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-cell">
+            <div class="review rounded-5">
+              <div class="header">
+                <img src="./assets/img/quotes.svg" alt="" />
+                <p>
+                  Много бързо и изключително коректно и професионално отношение!
+                </p>
+              </div>
+              <div class="user">
+                <img src="" alt="" />
+                <div class="info">
+                  <h6 class="name">Мартин</h6>
+                  <div class="stars">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="map container">
+        <img src="./assets/img/map.svg" alt="" />
+        <div class="pin">
+          <div class="info">
+            <p>MEGAPARTS Sofia</p>
+            <p>ул.Васил Левски 123</p>
+          </div>
+        </div>
+        <div class="pin">
+          <div class="info">
+            <p>MEGAPARTS Varna</p>
+            <p>ул.Васил Левски 123</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="container-fluid">
+      <div class="container">
+        <div class="row gap-4">
+          <div class="col-md">
+            <div>
+              <h6>Полезно за вас</h6>
+              <a href="#">Формуляр за връщане</a>
+              <a href="#">Мнения за <strong>MEGAPARTS</strong></a>
+              <a href="#">Регистрирай се за продавач</a>
+            </div>
+            <div>
+              <a href="#" class="green-link">Онлайн оценка на колата ви</a>
+            </div>
+          </div>
+          <div class="col-md">
+            <h6>Онлайн пазаруване</h6>
+            <a href="#">Общи условия на платформата</a>
+            <a href="#">Общи условия на MEGAPARTS Борса</a>
+            <a href="#">Общи условия Вендор</a>
+            <a href="#">Политика за използване на “бисквитки”</a>
+            <a href="#">Политика за защита на лични данни</a>
+          </div>
+          <div class="col-md">
+            <h6>За нас</h6>
+            <a href="#">Представяне</a>
+            <a href="#">Социални мрежи</a>
+            <a href="#">02 437 32 48</a>
+            <a href="#">at@megaparts.bg</a>
+          </div>
+          <div class="col-md">
+            <a href="#" class="logo">
+              <img src="./assets/img/Logo.png" alt="" />
+              <p>2023 &copy; MEGAPARTS Marketplace</p>
+            </a>
+            <a href="#"><strong>MEGA</strong>CARS</a>
+            <a href="#"><strong>MEGA</strong>ОБЯВИ</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

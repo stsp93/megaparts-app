@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <script
+      src="https://kit.fontawesome.com/48ed1957d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/smoothness/jquery-ui.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.touchswipe/1.6.19/jquery.touchSwipe.min.js"
+      integrity="sha512-YYiD5ZhmJ0GCdJvx6Xe6HzHqHvMpJEPomXwPbsgcpMFPW+mQEeVBU6l9n+2Y+naq+CLbujk91vHyN18q6/RSYw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"
+      integrity="sha512-H6cPm97FAsgIKmlBA4s774vqoN24V5gSQL4yBTDOY2su2DeXZVhQPxFK4P6GPdnZqM9fg1G3cMv5wD7e6cFLZQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.pkgd.min.js"
+      integrity="sha512-achKCfKcYJg0u0J7UDJZbtrffUwtTLQMFSn28bDJ1Xl9DWkl/6VDT3LMfVTo09V51hmnjrrOTbtg4rEgg0QArA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/flickity/3.0.0/flickity.css"
+      integrity="sha512-TZTUnuHs1njGko8PJqZlHzqZTZd880A+BvhR1jy1v4mWB4VFKVLG/eK9LYdDjxqNLmttSC1ygmqg6rkYjnEgaQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets//styles/style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <header class="container-fluid">
+      <nav class="navbar navbar-expand-lg container">
+        <div class="container">
+          <a class="navbar-brand" href="#"
+            ><img src="./assets/img/Logo.png" alt="Megaparts"
+          /></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="mainNavbar"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link external-links" href="#"
+                ><strong>MEGA</strong>CARS</a
+              >
+              <a class="nav-link external-links" href="#"
+                ><strong>MEGA</strong>ОБЯВИ</a
+              >
+            </div>
+            <div class="nav nav-cta">
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"><span class="icon msg"></span></a>
+                <a class="nav-link" href="#"
+                  ><span class="icon basket"></span
+                ></a>
+                <a class="nav-link" href="#"
+                  ><span class="icon favorites"></span
+                ></a>
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"
+                  ><span class="icon profile"></span> ВХОД</a
+                >
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"><span class="icon yt"></span></a>
+                <a class="nav-link" href="#"><span class="icon fb"></span></a>
+              </div>
+              <div class="navbar-nav">
+                <a class="nav-link" href="#"
+                  ><span class="icon phone"></span> 02 437 32 48</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="sec-header container-fluid">
+        <div class="container">
+          <div class="scrollable-container p-3">
+            <a class="nav-link rounded-pill home" href="#"
+              ><span class="icon"></span
+            ></a>
+            <a class="nav-link rounded-pill gear-sm" href="#"
+              ><span class="icon"></span> АВТОЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill borsachasti" href="#"
+              ><span class="icon"></span> БОРСА ЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill avtoborsa" href="#"
+              ><span class="icon"></span> АВТОБОРСА</a
+            >
+            <a class="nav-link rounded-pill prodavakoli" href="#"
+              ><span class="icon"></span> ПРОДАВА КОЛИ</a
+            >
+            <a class="nav-link rounded-pill prodavachasti" href="#"
+              ><span class="icon"></span> ПРОДАВА ЧАСТИ</a
+            >
+            <a class="nav-link rounded-pill igri" href="#"
+              ><span class="icon"></span> ИГРИ</a
+            >
+            <a class="nav-link rounded-pill zastrahovki" href="#"
+              ><span class="icon"></span> ЗАСТРАХОВКИ</a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+        <div class="cart container">
+            <h2>В КОЛИЧКАТА</h2>
+            <ul id="cart-items" class="list-group">
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="./assets/img/products/product1.png" class="img-fluid" alt="Product 1">
+                        </div>
+                        <div class="col-md-9 product-info">
+                            <h5 class="card-title">Фар за Audi A5 Coupe I</h5>
+                            <p class="number">Кат. №: s_167232784</p>
+                            <p class="price">Цена: <strong>967.70 лв.</strong></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="./assets/img/products/product2.png" class="img-fluid" alt="Product 2">
+                        </div>
+                        <div class="col-md-9 product-info">
+                            <h5 class="card-title">Фар за Audi A5 Coupe I</h5>
+                            <p class="number">Кат. №: s_167232784</p>
+                            <p class="price">Цена: <strong>967.70 лв.</strong></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img src="./assets/img/products/product3.png" class="img-fluid" alt="Product 3">
+                        </div>
+                        <div class="col-md-9 product-info">
+                            <h5 class="card-title">Фар за Audi A5 Coupe I</h5>
+                            <p class="number">Кат. №: s_167232784</p>
+                            <p class="price">Цена: <strong>967.70 лв.</strong></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <p class="total-price">Общо: <strong >1867.19</с> лв.</p>
+    
+            <button class="cta btn checkoutBtn rounded-5">Продължи</button>
+        </div>
+    </main>
+
+
+    <footer class="container-fluid">
+        <div class="container">
+          <div class="row gap-4">
+            <div class="col-md">
+              <div>
+                <h6>Полезно за вас</h6>
+                <a href="#">Формуляр за връщане</a>
+                <a href="#">Мнения за <strong>MEGAPARTS</strong></a>
+                <a href="#">Регистрирай се за продавач</a>
+              </div>
+              <div>
+                <a href="#" class="green-link">Онлайн оценка на колата ви</a>
+              </div>
+            </div>
+            <div class="col-md">
+              <h6>Онлайн пазаруване</h6>
+              <a href="#">Общи условия на платформата</a>
+              <a href="#">Общи условия на MEGAPARTS Борса</a>
+              <a href="#">Общи условия Вендор</a>
+              <a href="#">Политика за използване на “бисквитки”</a>
+              <a href="#">Политика за защита на лични данни</a>
+            </div>
+            <div class="col-md">
+              <h6>За нас</h6>
+              <a href="#">Представяне</a>
+              <a href="#">Социални мрежи</a>
+              <a href="#">02 437 32 48</a>
+              <a href="#">at@megaparts.bg</a>
+            </div>
+            <div class="col-md">
+              <a href="#" class="logo">
+                <img src="./assets/img/Logo.png" alt="" />
+                <p>2023 &copy; MEGAPARTS Marketplace</p>
+              </a>
+              <a href="#"><strong>MEGA</strong>CARS</a>
+              <a href="#"><strong>MEGA</strong>ОБЯВИ</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </body>
+  </html>
