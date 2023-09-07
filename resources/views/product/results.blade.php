@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+<x-search-bar />
 
 <div id="results" class="results container">
     <h2>РЕЗУЛТАТИ</h2>
@@ -9,7 +10,7 @@
         <li class="list-group-item">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="./assets/img/products/product1.png" class="img-fluid" alt="Product 1">
+                    <img src="{{$product->imageUrl}}" class="img-fluid" alt="Product 1">
                 </div>
                 <div class="col-md-9 product-info">
                     <h5 class="card-title">{{$product->name}}</h5>
@@ -20,10 +21,12 @@
             </div>
         </li>
         @endforeach
+        {{$products->links()}}
+        @if (count($products) === 0)
+            <p>Няма намерени резултати</p>
+        @endif
         
     </ul>
-
-    <a href="{{url()->previous()}}" class="cta btn backBtn rounded-5">Назад</a>
 </div>
     
 @endsection

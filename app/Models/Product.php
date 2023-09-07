@@ -18,6 +18,8 @@ class Product extends Model
 
     public function scopeSearch($query,$search)
     {
-        $query->where('name', 'like', '%' . $search . '%');
+        if(!empty($search)) {
+            $query->where('name', 'like', '%' . $search . '%');
+        }
     }
 }
