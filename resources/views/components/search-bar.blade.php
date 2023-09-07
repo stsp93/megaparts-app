@@ -1,5 +1,6 @@
 <section class="search container-fluid">
       <form method="get" action="/search" class="rounded-5 container">
+        @csrf
         <div class="search-header">
           <img src="{{asset('img/magnifier.svg')}}" alt="" />
           <h4 class="fw-bold">Бързо Търсене</h4>

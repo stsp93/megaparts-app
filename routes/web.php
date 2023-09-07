@@ -28,3 +28,5 @@ Route::get('/', function () {
 });
 
 Route::get('/search', [ProductsController::class, 'show']);
+
+Route::post('/add-to-cart', [ProductsController::class,'addToCart']);

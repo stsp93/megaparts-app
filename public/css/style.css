@@ -60,7 +60,17 @@ header .icon.msg {
   background: url("../img/msg.svg");
 }
 header .icon.basket {
+  position: relative;
   background: url("../img/basket.svg");
+}
+header .icon.basket .in-cart {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  background-color: #dc5426;
+  color: #fff;
+  padding: 1px 5px;
+  border-radius: 10px;
 }
 header .icon.favorites {
   background: url("../img/heart.svg");
