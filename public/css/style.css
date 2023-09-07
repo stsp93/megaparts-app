@@ -625,10 +625,11 @@ header .icon.phone {
 .results .total-price {
   font-size: 20px;
 }
-.results .agreeBtn {
+
+.agreeBtn {
   background-color: #33bb5a;
 }
-.results .agreeBtn:hover {
+.agreeBtn:hover {
   background-color: #33bb5a;
 }
 

@@ -746,11 +746,11 @@ strong {
   .total-price {
     font-size: 20px;
   }
-  .agreeBtn {
+}
+.agreeBtn {
+  background-color: $green;
+  &:hover {
     background-color: $green;
-    &:hover {
-      background-color: $green;
-    }
   }
 }
 

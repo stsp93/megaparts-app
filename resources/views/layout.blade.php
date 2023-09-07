@@ -96,8 +96,6 @@
                 <a class="nav-link" href="/cart">
                   <span class="icon basket">
                     <div class="in-cart">{{count($cart)}}</div>
-                    @unless (empty(session('cartCount')))
-                    @endunless
                   </span>
                 </a>
                 <a class="nav-link" href="#"
@@ -105,7 +103,7 @@
                 ></a>
               </div>
               <div class="navbar-nav">
-                <a class="nav-link" href="#"
+                <a class="nav-link" href="/login"
                   ><span class="icon profile"></span> ВХОД</a
                 >
               </div>
@@ -126,28 +124,28 @@
       <div class="sec-header container-fluid">
         <div class="container">
           <div class="scrollable-container p-3">
-            <a class="nav-link rounded-pill home" href="#"
+            <a class="nav-link rounded-pill home" href="/"
               ><span class="icon"></span
             ></a>
-            <a class="nav-link rounded-pill gear-sm" href="#"
+            <a class="nav-link rounded-pill gear-sm" href="/products"
               ><span class="icon"></span> АВТОЧАСТИ</a
             >
-            <a class="nav-link rounded-pill borsachasti" href="#"
+            <a class="nav-link rounded-pill borsachasti" href="/products"
               ><span class="icon"></span> БОРСА ЧАСТИ</a
             >
-            <a class="nav-link rounded-pill avtoborsa" href="#"
+            <a class="nav-link rounded-pill avtoborsa" href="/products"
               ><span class="icon"></span> АВТОБОРСА</a
             >
-            <a class="nav-link rounded-pill prodavakoli" href="#"
+            <a class="nav-link rounded-pill prodavakoli" href="/products"
               ><span class="icon"></span> ПРОДАВА КОЛИ</a
             >
-            <a class="nav-link rounded-pill prodavachasti" href="#"
+            <a class="nav-link rounded-pill prodavachasti" href="/products"
               ><span class="icon"></span> ПРОДАВА ЧАСТИ</a
             >
-            <a class="nav-link rounded-pill igri" href="#"
+            <a class="nav-link rounded-pill igri" href="/products"
               ><span class="icon"></span> ИГРИ</a
             >
-            <a class="nav-link rounded-pill zastrahovki" href="#"
+            <a class="nav-link rounded-pill zastrahovki" href="/products"
               ><span class="icon"></span> ЗАСТРАХОВКИ</a
             >
           </div>

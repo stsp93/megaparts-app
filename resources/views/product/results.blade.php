@@ -12,7 +12,7 @@
         <li class="list-group-item">
             <div class="row">
                 <div class="col-md-3">
-                    <img src="{{$product->imageUrl}}" class="img-fluid" alt="Product 1">
+                    <img src="{{$product->imageUrl}}" class="img-fluid" alt="{{ $product->imageUrl }}">
                 </div>
                 <div class="col-md-9 product-info">
                     <h5 class="card-title">{{$product->name}}</h5>
@@ -21,8 +21,9 @@
                     <form method="post" action="/add-to-cart">
                         @csrf
                         <input type="hidden" name="product_id" value="{{ $product->id }}">
-                        <button type="submit" class="cta btn agreeBtn rounded-5">Добави количката</button>
+                        <button type="submit" class="cta btn agreeBtn rounded-5 mb-2">Добави количката</button>
                     </form>
+                    <a href="/details/{{$product->id}}" class="cta btn btn-secondary rounded-5">Преглед</a>
                     
                 </div>
             </div>
