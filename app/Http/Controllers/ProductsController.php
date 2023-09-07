@@ -7,9 +7,21 @@ use App\Models\Product;
 
 class ProductsController extends Controller
 {
+    public function showAll()
+    {
+        return view('product.results', ['products' => Product::latest()->simplePaginate(5)]);
+    }
+
     public function showResults()
     {
         return view('product.results', ['products' => Product::latest()->search(request('q'))->simplePaginate(5)]);
+    }
+
+    public function showDetails($id)
+    {
+        $product = Product::findOrFail($id);
+
+        return view('product.details', ['product' => $product]);
     }
 
     public function showCart()
@@ -31,11 +43,11 @@ class ProductsController extends Controller
         if ($product) {
             session()->push('cart', $product);
 
-        $notification = 'Успешно добавен продукт';
+            $notification = 'Успешно добавен продукт';
         } else {
             $notification = 'Продуктът не беше намерен';
         }
-        
+
 
         // Redirect back to the previous page with the notification
         return redirect()->back()->with('notification', $notification);
@@ -46,19 +58,19 @@ class ProductsController extends Controller
         $productId = request('product_id');
 
         $cart = session('cart', []);
-    
+
         $index = array_search($productId, array_column($cart, 'id'));
-    
+
         if ($index !== false) {
             array_splice($cart, $index, 1);
-    
+
             session(['cart' => $cart]);
-    
+
             $notification = 'Продуктът е премахнат успешно';
         } else {
             $notification = 'Няма такъв продукт в количката';
         }
-    
+
         return redirect()->back()->with('notification', $notification);
     }
 }
