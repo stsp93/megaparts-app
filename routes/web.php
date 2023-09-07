@@ -27,6 +27,8 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/search', [ProductsController::class, 'show']);
+Route::get('/search', [ProductsController::class, 'showResults']);
+Route::get('/cart', [ProductsController::class, 'showCart']);
 
 Route::post('/add-to-cart', [ProductsController::class,'addToCart']);
+Route::post('/remove-from-cart', [ProductsController::class,'removeFromCart']);

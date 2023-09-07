@@ -1,6 +1,3 @@
-@php
-    session_start();
-@endphp
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -96,9 +93,9 @@
             <div class="nav nav-cta">
               <div class="navbar-nav">
                 <a class="nav-link" href="#"><span class="icon msg"></span></a>
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/cart">
                   <span class="icon basket">
-                    <div class="in-cart">{{count($_SESSION['cart'])}}</div>
+                    <div class="in-cart">{{count($cart)}}</div>
                     @unless (empty(session('cartCount')))
                     @endunless
                   </span>
