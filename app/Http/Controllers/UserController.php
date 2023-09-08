@@ -16,15 +16,18 @@ class UserController extends Controller
 
     public function login()
     {
-        $credentials = request()->only('username', 'password');
+        $credentials = request()->only('email', 'password');
 
         if (auth()->attempt($credentials)) {
             // Authentication was successful
+            if(auth()->user()->role === 'admin'){
+                return redirect()->intended('/private/admin');
+            }
             return redirect()->intended('/'); // Redirect to a protected page
         }
 
         // Authentication failed
-        return redirect('/login')->with('error', 'Грешни потребител или парола');
+        return redirect('/login')->with('error', 'Грешни имейл или парола');
     }
 
     public function showRegister() {
@@ -34,9 +37,9 @@ class UserController extends Controller
     public function register()
     {
         $formData = request()->validate([
-            'username' => ['required', 'min:3', Rule::unique('users')],
+            'email' => ['required', 'email', Rule::unique('users')],
             'password' => ['required', 'min:3'],
-            'password_confirmed' => ['confirmed']
+            'password_confirmed' => ['confirmed'],
         ]);
 
         $formData['password'] = bcrypt($formData['password']);
@@ -55,7 +58,7 @@ class UserController extends Controller
         request()->session()->invalidate();
         request()->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/login');
     }
 
     public function showManagerPanel()

@@ -7,9 +7,9 @@
     <form action="/register" method="post">
       @csrf
       <div class="mb-3">
-        <label for="username" class="form-label">Потребител</label>
-        <input name="username" type="text" class="form-control rounded-5" id="username" placeholder="Въведете потребител">
-        @error('username')
+        <label for="email" class="form-label">Имейл</label>
+        <input name="email" type="email" class="form-control rounded-5" id="email" placeholder="Въведете Имейл">
+        @error('email')
             <p class="text-danger">Името трябва да е поне 3 символа</p>
         @enderror
       </div>

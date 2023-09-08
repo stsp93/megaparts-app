@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -43,7 +44,7 @@ Route::get('/login', [UserController::class, 'showLogin']);
 Route::post('/login', [UserController::class, 'login']);
 Route::get('/register', [UserController::class, 'showRegister']);
 Route::post('/register', [UserController::class, 'register']);
-Route::get('/logout', [UserController::class, 'logout']);
+Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 // private routes
 
@@ -58,6 +59,8 @@ Route::prefix('private/manager')->middleware(['manager'])->group(function () {
 });
 //Only Admins access
 Route::prefix('private/admin')->middleware(['admin'])->group(function () {
-    Route::get('/', [UserController::class, 'showAdminPanel'])->middleware('admin'); 
+    Route::get('/', [AdminController::class, 'index']);
 });
+
+
 

@@ -9,8 +9,8 @@
     <form action="/login" method="post">
         @csrf
       <div class="mb-3">
-        <label for="username" class="form-label">Потребител</label>
-        <input name='username' type="text" class="form-control rounded-5" id="username" placeholder="Въведете потребител">
+        <label for="email" class="form-label">Имейл</label>
+        <input name='email' type="email" class="form-control rounded-5" id="email" placeholder="Въведете Имейл">
       </div>
       <div class="mb-3">
         <label for="password" class="form-label">Парола</label>
