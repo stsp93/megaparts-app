@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 // Product routes
 Route::get('/products', [ProductsController::class, 'showAll']);
@@ -41,4 +41,20 @@ Route::post('/remove-from-cart', [ProductsController::class,'removeFromCart']);
 
 Route::get('/login', [UserController::class, 'showLogin']);
 Route::post('/login', [UserController::class, 'login']);
+Route::get('/register', [UserController::class, 'showRegister']);
+Route::post('/register', [UserController::class, 'register']);
+Route::get('/logout', [UserController::class, 'logout']);
+
+// private routes
+
+// Manager Access
+Route::prefix('private/manager')->middleware(['auth'])->group(function () {
+    Route::get('/', [UserController::class, 'showManagerPanel']);
+    Route::get('/delete/{id}', [ProductsController::class, 'delete']);
+
+});
+//Only Admins access
+Route::prefix('private/admin')->middleware(['admin'])->group(function () {
+    Route::get('/', [UserController::class, 'showAdminPanel'])->middleware('admin'); 
+});
 

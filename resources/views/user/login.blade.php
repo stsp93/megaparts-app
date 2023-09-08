@@ -5,7 +5,7 @@
     <div class="alert alert-warning">{{ session('error') }}</div>
 @endif
 <div class="form container">
-    <h2>АДМИНИСТРАТОРСКИ ВХОД</h2>
+    <h2>ВХОД</h2>
     <form action="/login" method="post">
         @csrf
       <div class="mb-3">
@@ -18,6 +18,7 @@
       </div>
       <button type="submit" class="cta loginBtn btn rounded-5">ВХОД</button>
     </form>
+    <a href="/register" class="link-primary">Нямате регистрация?</a>
   </div>
 @endsection
 
