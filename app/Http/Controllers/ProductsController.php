@@ -38,7 +38,7 @@ class ProductsController extends Controller
     {
         $productId = request('product_id');
 
-        $product = Product::find($productId);
+        $product = Product::findOrFail($productId);
 
         if ($product) {
             session()->push('cart', $product);
@@ -72,5 +72,65 @@ class ProductsController extends Controller
         }
 
         return redirect()->back()->with('notification', $notification);
+    }
+
+
+    public function showCreate()
+    {
+        return view('product.create');
+    }
+
+    public function showEdit($id)
+    {
+        $product = Product::findOrFail($id);
+        return view('product.edit', ['product' => $product]);
+    }
+
+
+    // CRUD
+
+    public function create()
+    {
+        $formData = request()->validate([
+            'name' => ['required', 'min:3'],
+            'description' => ['required', 'min:10'],
+            'price' => ['required', 'decimal:0,2'],
+            'imageUrl' => ['required','url']
+        ]);
+
+        $product = Product::create($formData);
+        
+        return redirect('/private/manager')->with('notification', 'Успешно добавен продукт');
+    }
+
+    public function delete($id)
+    {
+        $product = Product::findOrFail($id);
+
+        // Check if the product exists
+        if (!$product) {
+            return redirect()->back()->with('error', 'Product not found');
+        }
+
+        // Delete
+        $product->delete();
+
+        // Redirect back to a page, e.g., the product listing page
+        return redirect('private/manager')->with('notification', 'Успешно изтрит продукт');
+    }
+
+    public function update($id)
+    {
+        $formData = request()->validate([
+            'name' => ['required', 'min:3'],
+            'description' => ['required', 'min:10'],
+            'price' => ['required', 'decimal:0,2'],
+            'imageUrl' => ['required','url']
+        ]);
+
+        $product = Product::findOrFail($id);
+        $product->update($formData);
+
+        return redirect('/private/manager')->with('notification', 'Успешна промяна');
     }
 }

@@ -58,14 +58,11 @@ class UserController extends Controller
         return redirect('/');
     }
 
-    public function showAdminPanel()
-    {
-        return view('user.admin');
-    }
-
     public function showManagerPanel()
     {
 
         return view('user.manager',['products' => Product::latest()->simplePaginate(5)]);
     }
+
+
 }

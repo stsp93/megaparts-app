@@ -48,10 +48,13 @@ Route::get('/logout', [UserController::class, 'logout']);
 // private routes
 
 // Manager Access
-Route::prefix('private/manager')->middleware(['auth'])->group(function () {
+Route::prefix('private/manager')->middleware(['manager'])->group(function () {
     Route::get('/', [UserController::class, 'showManagerPanel']);
     Route::get('/delete/{id}', [ProductsController::class, 'delete']);
-
+    Route::get('/create', [UserController::class, 'showCreate']);
+    Route::post('/create', [ProductsController::class, 'create']);
+    Route::get('/edit/{id}', [ProductsController::class, 'showEdit']);
+    Route::post('/edit/{id}', [ProductsController::class, 'update']);
 });
 //Only Admins access
 Route::prefix('private/admin')->middleware(['admin'])->group(function () {

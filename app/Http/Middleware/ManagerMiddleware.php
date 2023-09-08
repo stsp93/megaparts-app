@@ -16,7 +16,7 @@ class ManagerMiddleware
     public function handle(Request $request, Closure $next): Response
     {
 
-        if (auth()->check() && auth()->user()->role === 'manager') {
+        if (auth()->check() && auth()->user()->role !== 'user') {
             return $next($request);
         }
 
