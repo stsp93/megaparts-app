@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->decimal('price', 8, 2);
             $table->string('imageUrl');
+            $table->enum('slider',[null, 'manual', 'auto'])->default(null);
             $table->timestamps();
         });
     }

@@ -22,6 +22,11 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin.app');
+        return view('admin.home');
+    }
+
+    public function sliderManagement()
+    {
+        return view('admin.slider');
     }
 }

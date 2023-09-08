@@ -3,3 +3,29 @@
 
 // Bootstrap
 @import '~admin-lte/build/scss/adminlte';
+
+// Slider management
+.product-card {
+    width: 150px;
+    min-height: 150px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    background-color: #f9f9f9;
+
+  }
+
+
+
+  .slider {
+    min-height: 100px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 10px;
+    background-color: #f9f9f9;
+    display: flex; 
+
+ 
+}
+
+

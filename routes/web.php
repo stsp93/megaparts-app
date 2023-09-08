@@ -59,7 +59,8 @@ Route::prefix('private/manager')->middleware(['manager'])->group(function () {
 });
 //Only Admins access
 Route::prefix('private/admin')->middleware(['admin'])->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/', [AdminController::class, 'index'])->name('admin-home');
+    Route::get('/slider', [AdminController::class, 'sliderManagement'])->name('sliderManagement');
 });
 
 
