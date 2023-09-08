@@ -41562,10 +41562,19 @@ a.text-muted:hover {
 }
 
 .slider {
-  min-height: 100px;
+  min-height: 190px;
   border: 1px solid #ccc;
   padding: 5px;
   margin: 10px;
   background-color: #f9f9f9;
   display: flex;
+}
+
+#trashbin {
+  height: 100px;
+  width: 100px;
+}
+#trashbin img {
+  width: 100%;
+  height: 100%;
 }/*# sourceMappingURL=app.css.map */

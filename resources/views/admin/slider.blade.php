@@ -6,7 +6,7 @@
     <div>
         <div class="container-fluid">
             <div class="row">
-                <!-- First Column (Product Grid) -->
+                <!-- Product Grid -->
                 <div class="col-md-2">
                     <h2>Product List</h2>
                     <ul class="row" id="product-list" type="none">
@@ -60,10 +60,10 @@
                             
                         </ul>
                     </form>
-                    <h4>Trashbin</h4>
-                    <ul class="slider" id="trashbin">
-                            
-                    </ul>
+                    <h5>&darr; Drop redundant items here</h5>
+                    <div  id="trashbin">
+                        <img src="{{ asset('img/recycle-bin.svg') }}" alt="recycle bin">
+                    </div>
                 </div>
             </div>
         </div>
