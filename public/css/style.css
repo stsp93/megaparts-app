@@ -291,10 +291,12 @@ header .icon.phone {
 }
 .slider .slider-body .carousel-cell {
   width: 267px;
+  height: 290px;
   margin-right: 40px;
 }
 .slider .slider-body .card {
   text-decoration: none;
+  height: 100%;
 }
 .slider .slider-body .card .price {
   color: #33bb5a;

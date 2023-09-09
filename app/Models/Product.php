@@ -13,7 +13,8 @@ class Product extends Model
         'name',
         'description',
         'price',
-        'imageUrl'
+        'imageUrl',
+        'slider',
     ];
 
     public function scopeSearch($query,$search)
@@ -22,4 +23,5 @@ class Product extends Model
             $query->where('name', 'like', '%' . $search . '%');
         }
     }
+
 }

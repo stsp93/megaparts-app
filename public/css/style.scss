@@ -355,11 +355,14 @@ header {
 
     .carousel-cell {
       width: 267px;
+      height: 290px;
       margin-right: 40px;
     }
 
     .card {
       text-decoration: none;
+
+      height: 100%;
 
       .price {
         color: $green;

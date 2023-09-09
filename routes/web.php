@@ -25,9 +25,7 @@ use Illuminate\Support\Facades\Route;
 // update
 // destroy
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [ProductsController::class, 'showHome'])->name('home');
 
 // Product routes
 Route::get('/products', [ProductsController::class, 'showAll']);
@@ -61,6 +59,7 @@ Route::prefix('private/manager')->middleware(['manager'])->group(function () {
 Route::prefix('private/admin')->middleware(['admin'])->group(function () {
     Route::get('/', [AdminController::class, 'index'])->name('admin-home');
     Route::get('/slider', [AdminController::class, 'sliderManagement'])->name('sliderManagement');
+    Route::post('/slider', [AdminController::class, 'saveSliders']);
 });
 
 
