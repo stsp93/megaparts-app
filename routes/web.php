@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ViewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,22 +26,22 @@ use Illuminate\Support\Facades\Route;
 // update
 // destroy
 
-Route::get('/', [ProductsController::class, 'showHome'])->name('home');
+Route::get('/', [ViewController::class, 'home'])->name('home');
 
 // Product routes
-Route::get('/products', [ProductsController::class, 'showAll']);
-Route::get('/search', [ProductsController::class, 'showResults']);
-Route::get('/details/{id}', [ProductsController::class, 'showDetails']);
-Route::get('/cart', [ProductsController::class, 'showCart']);
+Route::get('/products', [ViewController::class, 'allProducts']);
+Route::get('/search', [ViewController::class, 'results']);
+Route::get('/details/{id}', [ViewController::class, 'details']);
+Route::get('/cart', [ViewController::class, 'cart']);
 
 Route::post('/add-to-cart', [ProductsController::class,'addToCart']);
 Route::post('/remove-from-cart', [ProductsController::class,'removeFromCart']);
 
 // User routes
 
-Route::get('/login', [UserController::class, 'showLogin']);
+Route::get('/login', [ViewController::class, 'login']);
 Route::post('/login', [UserController::class, 'login']);
-Route::get('/register', [UserController::class, 'showRegister']);
+Route::get('/register', [ViewController::class, 'register']);
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
@@ -48,11 +49,11 @@ Route::get('/logout', [UserController::class, 'logout'])->name('logout');
 
 // Manager Access
 Route::prefix('private/manager')->middleware(['manager'])->group(function () {
-    Route::get('/', [UserController::class, 'showManagerPanel']);
+    Route::get('/', [ViewController::class, 'managerPanel']);
     Route::get('/delete/{id}', [ProductsController::class, 'delete']);
-    Route::get('/create', [UserController::class, 'showCreate']);
+    Route::get('/create', [ViewController::class, 'create']);
     Route::post('/create', [ProductsController::class, 'create']);
-    Route::get('/edit/{id}', [ProductsController::class, 'showEdit']);
+    Route::get('/edit/{id}', [ViewController::class, 'edit']);
     Route::post('/edit/{id}', [ProductsController::class, 'update']);
 });
 //Only Admins access

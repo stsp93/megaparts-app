@@ -298,6 +298,11 @@ header .icon.phone {
   text-decoration: none;
   height: 100%;
 }
+.slider .slider-body .card img {
+  height: 60%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .slider .slider-body .card .price {
   color: #33bb5a;
   font-weight: 700;

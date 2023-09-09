@@ -7,32 +7,7 @@ use App\Models\Product;
 
 class ProductsController extends Controller
 {
-    public function showAll()
-    {
-        return view('product.results', ['products' => Product::latest()->simplePaginate(5)]);
-    }
 
-    public function showResults()
-    {
-        return view('product.results', ['products' => Product::latest()->search(request('q'))->simplePaginate(5)]);
-    }
-
-    public function showDetails($id)
-    {
-        $product = Product::findOrFail($id);
-
-        return view('product.details', ['product' => $product]);
-    }
-
-    public function showCart()
-    {
-        if (!session()->has('cart')) {
-            session(['cart' => []]);
-        }
-
-        $products = session('cart');
-        return view('product.cart', ['products' => $products]);
-    }
 
     public function addToCart()
     {
@@ -74,17 +49,6 @@ class ProductsController extends Controller
         return redirect()->back()->with('notification', $notification);
     }
 
-
-    public function showCreate()
-    {
-        return view('product.create');
-    }
-
-    public function showEdit($id)
-    {
-        $product = Product::findOrFail($id);
-        return view('product.edit', ['product' => $product]);
-    }
 
 
     // CRUD
@@ -135,11 +99,5 @@ class ProductsController extends Controller
     }
 
 
-    public function showHome() {
-        $manualSliderProducts = Product::where('slider', 'manual')->orderBy('position', 'asc')->get();
-        $autoSliderProducts = Product::where('slider', 'auto')->orderBy('position', 'asc')->get();
 
-
-        return view('home', ['manualProducts' => $manualSliderProducts,'autoProducts' => $autoSliderProducts]);
-    }
 }

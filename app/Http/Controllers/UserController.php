@@ -3,16 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use App\Models\Product;
 use App\Models\User;
 use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
-    public function showLogin()
-    {
-        return view('user.login');
-    }
 
     public function login()
     {
@@ -30,9 +25,6 @@ class UserController extends Controller
         return redirect('/login')->with('error', 'Грешни имейл или парола');
     }
 
-    public function showRegister() {
-        return view('user.register');
-    }
 
     public function register()
     {
@@ -60,12 +52,5 @@ class UserController extends Controller
 
         return redirect('/login');
     }
-
-    public function showManagerPanel()
-    {
-
-        return view('user.manager',['products' => Product::latest()->simplePaginate(5)]);
-    }
-
 
 }

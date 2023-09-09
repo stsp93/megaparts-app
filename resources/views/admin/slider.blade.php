@@ -24,8 +24,8 @@
                 </div>
 
                 <!-- Slider Forms -->
-                <div class="col-md-7">
-                    <h2>Slider Forms</h2>
+                <div class="col-md-7 slider-forms">
+                    <h2>Slider Forms (Save them one by one)</h2>
                     <form class="mb-4" method="post">
                         <input type="hidden" name="form_id" value="manual-form">
                         @csrf
