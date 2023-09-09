@@ -136,8 +136,8 @@ class ProductsController extends Controller
 
 
     public function showHome() {
-        $manualSliderProducts = Product::where('slider', 'manual')->latest('updated_at')->get();
-        $autoSliderProducts = Product::where('slider', 'auto')->latest('updated_at')->get();
+        $manualSliderProducts = Product::where('slider', 'manual')->orderBy('position', 'asc')->get();
+        $autoSliderProducts = Product::where('slider', 'auto')->orderBy('position', 'asc')->get();
 
 
         return view('home', ['manualProducts' => $manualSliderProducts,'autoProducts' => $autoSliderProducts]);

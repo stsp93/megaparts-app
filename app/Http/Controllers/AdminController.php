@@ -30,8 +30,8 @@ class AdminController extends Controller
 
     public function sliderManagement()
     {
-        $manualSliderProducts = Product::where('slider', 'manual')->latest('updated_at')->get();
-        $autoSliderProducts = Product::where('slider', 'auto')->latest('updated_at')->get();
+        $manualSliderProducts = Product::where('slider', 'manual')->orderBy('position', 'asc')->get();
+        $autoSliderProducts = Product::where('slider', 'auto')->orderBy('position', 'asc')->get();
         $allProducts = Product::latest()->get();
 
         return view('admin.slider', ['allProducts' => $allProducts, 'manualProducts' => $manualSliderProducts, 'autoProducts' => $autoSliderProducts]);
@@ -54,7 +54,8 @@ class AdminController extends Controller
 
                 // add products to slider
                 foreach ($productIds as $key => $productId) {
-                    Product::where('id', $productId)->update(['slider' => 'manual']);
+                    Product::find($productId)->touch();
+                    Product::where('id', $productId)->update(['slider' => 'manual', 'position' => $key]);
                 }
             } elseif ($formId === 'auto-form') {
                 $autoSliderProductsIds = Product::where('slider', 'auto')->pluck('id')->toArray();
@@ -67,7 +68,7 @@ class AdminController extends Controller
 
                 // add products to slider
                 foreach ($productIds as $key => $productId) {
-                    Product::where('id', $productId)->update(['slider' => 'auto']);
+                    Product::where('id', $productId)->update(['slider' => 'auto', 'position' => $key]);
                 }
             }
         } catch (Exception $e) {
@@ -75,7 +76,7 @@ class AdminController extends Controller
         }
 
 
-        dd(DB::getQueryLog());
+        // dd(DB::getQueryLog());
         return redirect()->back();
     }
 }

@@ -18,6 +18,7 @@ return new class extends Migration
             $table->decimal('price', 8, 2);
             $table->string('imageUrl');
             $table->enum('slider',[null, 'manual', 'auto'])->default(null);
+            $table->integer('position')->default(0);
             $table->timestamps();
         });
     }
