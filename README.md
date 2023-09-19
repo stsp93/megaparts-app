@@ -39,6 +39,13 @@ php artisan key:generate
 php artisan migrate
 ```
 
+7. Start the project
+
+```
+php artisan serve
+npm run dev
+```
+
 
 ## User Roles and Access Permissions
 

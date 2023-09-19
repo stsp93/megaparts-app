@@ -1,4 +1,5 @@
 <x-laravel-ui-adminlte::adminlte-layout>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <body class="hold-transition sidebar-mini layout-fixed">
         <div class="wrapper">

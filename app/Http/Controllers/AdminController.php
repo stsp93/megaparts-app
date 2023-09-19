@@ -39,11 +39,11 @@ class AdminController extends Controller
 
     public function saveSliders()
     {
-        $formId = request()->input('form_id');
-        DB::enableQueryLog();
-        $productIds = request()->input('product_ids');
+        $sliderId = request()->input('sliderId');
+        $productIds = request()->input('productIds');
+
         try {
-            if ($formId === 'manual-form') {
+            if ($sliderId === 'manualSlider') {
                 $manualSliderProductIds = Product::where('slider', 'manual')->pluck('id')->toArray();
                 // remove products from slider
                 foreach ($manualSliderProductIds as $id) {
@@ -57,7 +57,7 @@ class AdminController extends Controller
                     Product::find($productId)->touch();
                     Product::where('id', $productId)->update(['slider' => 'manual', 'position' => $key]);
                 }
-            } elseif ($formId === 'auto-form') {
+            } elseif ($sliderId === 'autoSlider') {
                 $autoSliderProductsIds = Product::where('slider', 'auto')->pluck('id')->toArray();
                 // remove products from slider
                 foreach ($autoSliderProductsIds as $id) {
@@ -75,8 +75,6 @@ class AdminController extends Controller
             return dd($e);
         }
 
-
-        // dd(DB::getQueryLog());
-        return redirect()->back();
+        return response()->json(['message' => 'Slider positions updated successfully']);
     }
 }
