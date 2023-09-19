@@ -30,7 +30,8 @@ Route::get('/', [ViewController::class, 'home'])->name('home');
 
 // Product routes
 Route::get('/products', [ViewController::class, 'allProducts']);
-Route::get('/search', [ViewController::class, 'results']);
+Route::post('/getProducts', [ProductsController::class, 'getProducts']);//  Client-Side Render
+Route::get('/search', [ViewController::class, 'results']); 
 Route::get('/details/{id}', [ViewController::class, 'details']);
 Route::get('/cart', [ViewController::class, 'cart']);
 

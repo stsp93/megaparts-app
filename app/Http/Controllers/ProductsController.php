@@ -7,6 +7,17 @@ use App\Models\Product;
 
 class ProductsController extends Controller
 {
+// REST API METHOD
+    public function getProducts() {
+        //  For Client-Side Render
+        $perPage = 5;
+        $page = request()->input('page', 1);
+    
+        // Retrieve products from the database with pagination
+        $products = Product::latest()->paginate($perPage, ['*'], 'page', $page);
+    
+        return response()->json(['products' => $products]);
+}
 
 
     public function addToCart()

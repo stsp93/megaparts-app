@@ -26,13 +26,17 @@ class ViewController extends Controller
 
     public function allProducts()
     {
-        return view('product.results', ['products' => Product::latest()->simplePaginate(5)]);
+    return view('product.results'/*, ['products' => Product::latest()->simplePaginate(5)] For Server-Side*/);
     }
+
+
 
     public function results()
     {
         return view('product.results', ['products' => Product::latest()->search(request('q'))->simplePaginate(5)]);
     }
+
+    
 
     public function details($id)
     {

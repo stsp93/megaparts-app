@@ -32,7 +32,7 @@ class AdminController extends Controller
     {
         $manualSliderProducts = Product::where('slider', 'manual')->orderBy('position', 'asc')->get();
         $autoSliderProducts = Product::where('slider', 'auto')->orderBy('position', 'asc')->get();
-        $allProducts = Product::latest()->get();
+        $allProducts = Product::latest()->simplePaginate(12);
 
         return view('admin.slider', ['allProducts' => $allProducts, 'manualProducts' => $manualSliderProducts, 'autoProducts' => $autoSliderProducts]);
     }

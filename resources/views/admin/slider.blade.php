@@ -20,6 +20,7 @@
                             </li>
                         @endforeach
                     </ul>
+                    {{$allProducts->links()}}
                 </div>
 
                 <!-- Slider Forms -->
