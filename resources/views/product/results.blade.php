@@ -56,11 +56,10 @@
                     page: page
                 },
                 success: function(response) {
-                    console.log(response);
                     // Handle the response data
                     if (response.products.data.length > 0) {
                         const productsList = $(
-                            '.list-group'); // Update this selector with your product list container
+                            '.list-group'); 
 
                         $.each(response.products.data, function(index, product) {
                             // Create HTML elements for each product and append them to the product list container
@@ -103,7 +102,7 @@
             });
         }
 
-        // Call the loadProducts function initially to load products
+        // initial load
         loadProducts();
 
         $('#load-more-btn').click(function() {
